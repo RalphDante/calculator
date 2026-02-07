@@ -1,12 +1,32 @@
 using System;
 
-public static class Calculator
+public class Calculator
 {
-    public static double? Calculate(int first, int second, string operation)
+    public double? Calculate(int first, int second, string operation)
     {
-        //write your business logic in here
+        double result = 0;
+        switch(operation){
+            case "+":
+                result = first + second;
+                break;
+            case "-":
+                result = first - second;
+                break;
+            case "*":
+                result = first * second;
+                break;
+            case "/":
+                result = first / second;
+                break;
+            case "%":
+                result = first % second;
+                break;
+            default:
+                Console.WriteLine("Incorrect Operation Used, please try again");
+                break;
+        }
 
-        return null;
+        return result;
     }
 }
 
